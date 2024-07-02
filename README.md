@@ -8,7 +8,7 @@
 | Search product using categories 	| Login                            | Modify products              |                           |
 | Search product					          | Logout                           | Delete or disable products   |                           |
 | Register							            | Add products to chart            | Review monthly statements    |                           |
-|									                  | Delete products to chart         |                              |                           |
+|	See the all the products          | Delete products to chart         |                              |                           |
 |									                  | Modify products from chart       |                              |                           |
 |									                  | Search product                   |                              |                           |
 |									                  | Search product using categories  |                              |                           |
