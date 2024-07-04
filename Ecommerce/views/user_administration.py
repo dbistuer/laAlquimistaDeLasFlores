@@ -32,7 +32,7 @@ def user_signup(request):
 
 # login page
 def user_login(request):
-    if request.method == 'GET':
+    if request.method == 'POST':
         user = get_user_POST(request)
         user = authenticate(request, username=user.username, password=user.password)
         if user:

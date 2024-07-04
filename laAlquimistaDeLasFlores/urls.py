@@ -23,7 +23,7 @@ from Ecommerce import views
 
 urlpatterns = [
     path('i18n/', include('django.conf.urls.i18n')),
-    # other paths
+    path("", include("django_cypress.urls")),
 ]
 urlpatterns += i18n_patterns(
     path('admin/', admin.site.urls),
