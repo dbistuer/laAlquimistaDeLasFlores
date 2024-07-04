@@ -1,0 +1,218 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-04 13:46+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\laAlquimistaDeLasFlores\settings\base.py:133
+#: .\templates\site_administration\translation.html:26
+msgid "English"
+msgstr "Inglés"
+
+#: .\laAlquimistaDeLasFlores\settings\base.py:134
+#: .\templates\site_administration\translation.html:27
+msgid "Spanish"
+msgstr "Español"
+
+#: .\laAlquimistaDeLasFlores\settings\base.py:135
+#: .\templates\site_administration\translation.html:28
+msgid "Catalan"
+msgstr "Catalán"
+
+#: .\templates\site_administration\error.html:27
+msgid "Oops!"
+msgstr "Vaya!"
+
+#: .\templates\site_administration\error.html:28
+msgid "Something went wrong. The page you are looking for could not be found."
+msgstr "Algo ha ido mal. La página que buscas no se ha encontrado."
+
+#: .\templates\site_administration\error.html:29
+msgid "Go to Homepage"
+msgstr "Ir a la página de inicio"
+
+#: .\templates\site_administration\error.html:30
+msgid "Go Back"
+msgstr "Volver atrás"
+
+#: .\templates\site_administration\translation.html:23
+msgid "Language"
+msgstr "Lenguaje"
+
+#: .\templates\site_administration\translation.html:33
+msgid "Welcome"
+msgstr "Bienvenido"
+
+#: .\templates\site_administration\translation.html:34
+msgid "This is a sample paragraph to demonstrate language swapping."
+msgstr "Este es un párrafo de ejemplo para demostrar el cambio de idioma."
+
+#: .\templates\user_administration\address.html:6
+#: .\templates\user_administration\address.html:16
+#: .\templates\user_administration\signup.html:6
+#: .\templates\user_administration\signup.html:16
+msgid "User Registration"
+msgstr "Registro de usuario"
+
+#: .\templates\user_administration\address.html:22
+msgid "Address"
+msgstr "Dirección"
+
+#: .\templates\user_administration\address.html:23
+msgid "Enter address"
+msgstr "Introduce dirección"
+
+#: .\templates\user_administration\address.html:26
+msgid "City"
+msgstr "Ciudad"
+
+#: .\templates\user_administration\address.html:27
+msgid "Enter city"
+msgstr "Introduce ciudad"
+
+#: .\templates\user_administration\address.html:30
+msgid "Province"
+msgstr "Provincia"
+
+#: .\templates\user_administration\address.html:31
+msgid "Enter province"
+msgstr "Introduce provincia"
+
+#: .\templates\user_administration\address.html:34
+msgid "Country"
+msgstr "País"
+
+#: .\templates\user_administration\address.html:35
+msgid "Enter country"
+msgstr "Introduce país"
+
+#: .\templates\user_administration\address.html:38
+msgid "Postal Code"
+msgstr "Código postal"
+
+#: .\templates\user_administration\address.html:39
+msgid "Enter postal code"
+msgstr "Introduce código postal"
+
+#: .\templates\user_administration\address.html:41
+#: .\templates\user_administration\signup.html:63
+msgid "Register"
+msgstr "Registrarse"
+
+#: .\templates\user_administration\login.html:6
+#: .\templates\user_administration\login.html:16
+#: .\templates\user_administration\login.html:32
+msgid "Login"
+msgstr "Iniciar sesión"
+
+#: .\templates\user_administration\login.html:21
+msgid "User name"
+msgstr "Nombre de usuario"
+
+#: .\templates\user_administration\login.html:22
+msgid "Enter user name"
+msgstr "Introduce nombre de usuario"
+
+#: .\templates\user_administration\login.html:25
+#: .\templates\user_administration\login.html:26
+#: .\templates\user_administration\signup.html:54
+msgid "Password"
+msgstr "Contraseña"
+
+#: .\templates\user_administration\login.html:30
+msgid "Remember me"
+msgstr "Recuérdame"
+
+#: .\templates\user_administration\logout.html:6
+msgid "Logout"
+msgstr "Cerrar sesión"
+
+#: .\templates\user_administration\logout.html:21
+msgid "Logged Out"
+msgstr "Estás desconectado"
+
+#: .\templates\user_administration\logout.html:24
+msgid "You have been logged out successfully."
+msgstr "Te has desconectado correctamente."
+
+#: .\templates\user_administration\logout.html:25
+msgid "Login Again"
+msgstr "Volver a iniciar sesión"
+
+#: .\templates\user_administration\signup.html:22
+msgid "Username"
+msgstr "Nombre de usuario"
+
+#: .\templates\user_administration\signup.html:23
+msgid "Enter username"
+msgstr "Introduce nombre de usuario"
+
+#: .\templates\user_administration\signup.html:26
+msgid "First name"
+msgstr "Nombre"
+
+#: .\templates\user_administration\signup.html:27
+msgid "Enter first name"
+msgstr "Introduce nombre"
+
+#: .\templates\user_administration\signup.html:30
+msgid "Last name"
+msgstr "Apellido"
+
+#: .\templates\user_administration\signup.html:31
+msgid "Enter last name"
+msgstr "Introduce apellido"
+
+#: .\templates\user_administration\signup.html:42
+msgid "Identification"
+msgstr "Identificación"
+
+#: .\templates\user_administration\signup.html:43
+msgid "Enter identification"
+msgstr "Introduce identificación"
+
+#: .\templates\user_administration\signup.html:46
+msgid "Phone"
+msgstr "Teléfono"
+
+#: .\templates\user_administration\signup.html:47
+msgid "Enter phone number"
+msgstr "Introduce número de teléfono"
+
+#: .\templates\user_administration\signup.html:50
+msgid "Email address"
+msgstr "Correo electrónico"
+
+#: .\templates\user_administration\signup.html:51
+msgid "Enter email"
+msgstr "Introduce correo electrónico"
+
+#: .\templates\user_administration\signup.html:55
+msgid "Enter password"
+msgstr "Introduce contraseña"
+
+#: .\templates\user_administration\signup.html:59
+msgid "Confirm Password"
+msgstr "Confirmar contraseña"
+
+#: .\templates\user_administration\signup.html:60
+msgid "Repeat password"
+msgstr "Repite contraseña"
+
+#: .\templates\user_administration\signup.html:62
+msgid "Passwords do not match"
+msgstr "Las contraseñas no coinciden"

@@ -2,6 +2,7 @@ from enum import Enum
 
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
+from django.utils.translation import gettext_lazy as _
 
 
 # Create your views here.

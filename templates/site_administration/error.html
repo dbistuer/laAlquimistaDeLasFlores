@@ -1,3 +1,4 @@
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,10 +24,10 @@
 </head>
 <body>
     <div class="container error-container">
-        <h1 class="display-1">Oops!</h1>
-        <p class="lead">Something went wrong. The page you are looking for could not be found.</p>
-        <a href="/" class="btn btn-primary">Go to Homepage</a>
-        <a href="javascript:history.back()" class="btn btn-secondary">Go Back</a>
+        <h1 class="display-1">{% trans "Oops!" %}</h1>
+        <p class="lead">{% trans "Something went wrong. The page you are looking for could not be found." %}</p>
+        <a href="/" class="btn btn-primary">{% trans "Go to Homepage" %}</a>
+        <a href="javascript:history.back()" class="btn btn-secondary">{% trans "Go Back" %}</a>
     </div>
 
     <!-- Bootstrap JS and dependencies -->
