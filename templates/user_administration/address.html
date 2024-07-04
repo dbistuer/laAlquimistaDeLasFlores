@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card mt-5">
+                    <div class="card-header text-center">
+                        <h4>User Registration</h4>
+                    </div>
+                    <div class="card-body">
+                        <form id="registrationForm" method="post">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="address">Address</label>
+                                <input type="text" class="form-control" id="address" name="address" placeholder="Enter address">
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" class="form-control" id="city" name="city" placeholder="Enter city">
+                            </div>
+                            <div class="form-group">
+                                <label for="province">Province</label>
+                                <input type="text" class="form-control" id="province" name="province" placeholder="Enter province">
+                            </div>
+                            <div class="form-group">
+                                <label for="country">Country</label>
+                                <input type="text" class="form-control" id="country" name="country" placeholder="Enter country">
+                            </div>
+                            <div class="form-group">
+                                <label for="postalCode">Postal Code</label>
+                                <input type="text" class="form-control" id="postalCode" name="postalCode" placeholder="Enter postal code">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Register</button>
+                        </form>
+                    </div>
+                    <div class="card-footer text-center">
+                        <small>&copy; 2024 LaAlquimistaDeLasFlores</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        var strengthbar= document.getElementById("meter");
+        var password = document.getElementById('password');
+        var confirmPassword = document.getElementById('confirmPassword');
+        password.addEventListener("keyup", function(){checkpassword(password.value);});
+        confirmPassword.addEventListener("keyup", function(){checkPasswordEqual(password.value,confirmPassword.value);});
+
+        function checkpassword(password)
+        {
+            var strength=0;
+            if (password.match(/[a-z]+/)){      strength+=1; }
+            if (password.match(/[A-Z]+/)){      strength+=1; }
+            if (password.match(/[0-9]+/)){      strength+=1; }
+            if (password.match(/[$@#&!]+/)){    strength+=1; }
+
+            if (password.length<6){ display.innerHTML="minimum number of characters is 6"; }
+
+            if (password.length>12){ display.innerHTML="maximum number of characters is 12";
+                                   }
+            switch(strength){
+            case 0:
+                strengthbar.value=0;
+                break;
+
+            case 1:
+                strengthbar.value=25;
+                break;
+
+            case 2:
+                strengthbar.value=50;
+                break;
+
+            case 3:
+                strengthbar.value=75;
+                break;
+
+            case 4:
+                strengthbar.value=100;
+                break; }
+        }
+        function checkPasswordEqual(password,confirmPassword){
+            error = document.getElementById('passwordError');
+            if (password !== confirmPassword) {
+                event.preventDefault();
+                error.style.display = 'block';
+            }else error.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

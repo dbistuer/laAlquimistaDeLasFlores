@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card mt-5">
+                    <div class="card-header text-center">
+                        <h4>User Registration</h4>
+                    </div>
+                    <div class="card-body">
+                        <form id="registrationForm" method="post">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="text" class="form-control" id="username" name="username" placeholder="Enter username" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="first_name">First name</label>
+                                <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Enter first name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="last_name">Last name</label>
+                                <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Enter last name" required>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" id="NIF" name="NIF" value="NIF">
+                              <label class="form-check-label" for="NIF">NIF</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" id="NIE" name="NIE" value="NIE">
+                              <label class="form-check-label" for="NIE">NIE</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="identification">Identification</label>
+                                <input type="text" class="form-control" id="identification" name="identification" placeholder="Enter identification" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter phone number">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email address</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" required>
+                            </div>
+                            <progress max="100" value="0" id="meter"></progress>
+                            <div class="form-group">
+                                <label for="confirmPassword">Confirm Password</label>
+                                <input type="password" class="form-control" id="confirmPassword" placeholder="Repeat password" required>
+                            </div>
+                            <div id="passwordError" class="text-danger" style="display: none;">Passwords do not match</div>
+                            <button type="submit" class="btn btn-primary btn-block">Register</button>
+                        </form>
+                    </div>
+                    <div class="card-footer text-center">
+                        <small>&copy; 2024 LaAlquimistaDeLasFlores</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        var strengthbar= document.getElementById("meter");
+        var password = document.getElementById('password');
+        var confirmPassword = document.getElementById('confirmPassword');
+        password.addEventListener("keyup", function(){checkpassword(password.value);});
+        confirmPassword.addEventListener("keyup", function(){checkPasswordEqual(password.value,confirmPassword.value);});
+
+        function checkpassword(password)
+        {
+            var strength=0;
+            if (password.match(/[a-z]+/)){      strength+=1; }
+            if (password.match(/[A-Z]+/)){      strength+=1; }
+            if (password.match(/[0-9]+/)){      strength+=1; }
+            if (password.match(/[$@#&!]+/)){    strength+=1; }
+
+            if (password.length<6){ display.innerHTML="minimum number of characters is 6"; }
+
+            if (password.length>12){ display.innerHTML="maximum number of characters is 12";
+                                   }
+            switch(strength){
+            case 0:
+                strengthbar.value=0;
+                break;
+
+            case 1:
+                strengthbar.value=25;
+                break;
+
+            case 2:
+                strengthbar.value=50;
+                break;
+
+            case 3:
+                strengthbar.value=75;
+                break;
+
+            case 4:
+                strengthbar.value=100;
+                break; }
+        }
+        function checkPasswordEqual(password,confirmPassword){
+            error = document.getElementById('passwordError');
+            if (password !== confirmPassword) {
+                event.preventDefault();
+                error.style.display = 'block';
+            }else error.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
