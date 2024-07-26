@@ -1,0 +1,39 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="{% get_current_language %}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding: 20px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="d-flex justify-content-end">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {% trans "Language" %}
+            </button>
+            <div class="dropdown-menu" aria-labelledby="languageDropdown">
+                <a class="dropdown-item" href="{% url 'set_language' %}?language=en">{% trans "English" %}</a>
+                <a class="dropdown-item" href="{% url 'set_language' %}?language=es">{% trans "Spanish" %}</a>
+                <a class="dropdown-item" href="{% url 'set_language' %}?language=es">{% trans "Catalan" %}</a>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="mt-4">{% trans "Welcome" %}</h1>
+    <p>{% trans "This is a sample paragraph to demonstrate language swapping." %}</p>
+</div>
+
+</body>
+</html>

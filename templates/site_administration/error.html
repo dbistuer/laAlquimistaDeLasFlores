@@ -1,0 +1,29 @@
+{% extends 'navbar.html' %}
+{% load i18n %}
+{% block stylesheet %}
+ <style>
+        .error-container {
+            margin-top: 100px;
+            text-align: center;
+        }
+        .error-container h1 {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+        .error-container p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+
+    <div class="container error-container">
+        <h1 class="display-1">{% trans "Oops!" %}</h1>
+        <p class="lead">{% trans "Something went wrong. The page you are looking for could not be found." %}</p>
+        <a href="/" class="btn btn-primary">{% trans "Go to Homepage" %}</a>
+        <a href="javascript:history.back()" class="btn btn-secondary">{% trans "Go Back" %}</a>
+    </div>
+
+{% endblock %}
+

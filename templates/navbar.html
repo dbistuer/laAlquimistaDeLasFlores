@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load languageSwapper i18n %}
+{% block navbar %}
+    <div>
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{% url 'home' %}">LaAlquimistaDeLasFlores</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="{% url 'home' %}">{% trans 'Home' %}</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto">
+                    <!-- user settings -->
+                        <li class="nav-item dropdown dropleft">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                                {% if user.is_authenticated %}
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="green" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                {% else %}
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                {% endif %}
+                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"></path>
+                                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"></path>
+                                    </svg>
+                            </a>
+                            <ul class="dropdown-menu">
+                                {% if user.is_authenticated %}
+                                    <li><a class="dropdown-item" href={% url 'password_change' %}>{% trans 'Password change' %}</a></li>
+                                    <li><a class="dropdown-item" href={% url 'logout' %}>{% trans 'Logout' %}</a></li>
+                                {% else %}
+                                    <li><a class="dropdown-item" href={% url 'login' %}>{% trans 'Login' %}</a></li>
+                                    <li><a class="dropdown-item" href={% url 'signup' %}>{% trans 'Sign in' %}</a></li>
+                                    <!--<li><a class="dropdown-item" href={% url 'password_reset' %}>{% trans 'Password reset' %}</a></li>-->
+                                {% endif %}
+                            </ul>
+                        </li>
+                        <!-- language settings -->
+                        <li class="nav-item dropdown ">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                                {% with request.LANGUAGE_CODE as language %}
+                                    {% if language == 'ca' %}
+                                        <i class="flag flag-ca"></i>
+                                    {% elif language == 'es' %}
+                                        <i class="flag flag-es"></i>
+                                    {% else %}
+                                        <i class="flag flag-uk"></i>
+                                    {% endif %}
+                                {% endwith %}
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{% language_swap request.path "en" %}"><i class="flag flag-uk"></i> {% trans 'English' %}</a></li>
+                                <li><a class="dropdown-item" href="{% language_swap request.path "es" %}"><i class="flag flag-es"></i> {% trans 'Spanish' %}</a></li>
+                                <li><a class="dropdown-item" href="{% language_swap request.path "ca" %}"><i class="flag flag-ca"></i> {% trans 'Catalan' %}</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <h4>{{ user.username }}</h4>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+{% endblock %}

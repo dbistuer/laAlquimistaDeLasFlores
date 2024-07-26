@@ -1,0 +1,117 @@
+{% extends "navbar.html" %}
+{% load i18n %}
+
+{% block content %}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card mt-5">
+                    <div class="card-header text-center">
+                        <h4>{% trans "User Registration" %}</h4>
+                    </div>
+                    <div class="card-body">
+                        <form id="registrationForm" method="post">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="username">{% trans "Username" %}</label>
+                                <input type="text" class="form-control" id="username" name="username" placeholder={% trans "Enter username" %} required>
+                            </div>
+                            <div class="form-group">
+                                <label for="first_name">{% trans "First name" %}</label>
+                                <input type="text" class="form-control" id="first_name" name="first_name" placeholder={% trans "Enter first name" %} required>
+                            </div>
+                            <div class="form-group">
+                                <label for="last_name">{% trans "Last name" %}</label>
+                                <input type="text" class="form-control" id="last_name" name="last_name" placeholder={% trans "Enter last name" %} required>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" id="NIF" name=NIF" value="NIF">
+                              <label class="form-check-label" for="NIF">NIF</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" id="NIE" name="NIE" value="NIE">
+                              <label class="form-check-label" for="NIE">NIE</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="identification">{% trans "Identification" %}</label>
+                                <input type="text" class="form-control" id="identification" name="identification" placeholder={% trans "Enter identification" %} required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">{% trans "Phone" %}</label>
+                                <input type="text" class="form-control" id="phone" name="phone" placeholder={% trans "Enter phone number" %}>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">{% trans "Email address" %}</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder={% trans "Enter email" %} required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">{% trans "Password" %}</label>
+                                <input type="password" class="form-control" id="password" name="password" placeholder={% trans "Enter password" %} required>
+                            </div>
+                            <progress max="100" value="0" id="meter"></progress>
+                            <div class="form-group">
+                                <label for="confirmPassword">{% trans "Confirm Password" %}</label>
+                                <input type="password" class="form-control" id="confirmPassword" placeholder={% trans "Repeat password" %} required>
+                            </div>
+                            <div id="passwordError" class="text-danger" style="display: none;">{% trans "Passwords do not match" %}</div>
+                            <button type="submit" class="btn btn-primary btn-block">{% trans "Register" %}</button>
+                        </form>
+                    </div>
+                    <div class="card-footer text-center">
+                        <small>&copy; 2024 LaAlquimistaDeLasFlores</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block javascript %}
+<script>
+        var strengthbar= document.getElementById("meter");
+        var password = document.getElementById('password');
+        var confirmPassword = document.getElementById('confirmPassword');
+        password.addEventListener("keyup", function(){checkpassword(password.value);});
+        confirmPassword.addEventListener("keyup", function(){checkPasswordEqual(password.value,confirmPassword.value);});
+
+        function checkpassword(password)
+        {
+            var strength=0;
+            if (password.match(/[a-z]+/)){      strength+=1; }
+            if (password.match(/[A-Z]+/)){      strength+=1; }
+            if (password.match(/[0-9]+/)){      strength+=1; }
+            if (password.match(/[$@#&!]+/)){    strength+=1; }
+
+            if (password.length<6){ display.innerHTML="minimum number of characters is 6"; }
+
+            if (password.length>12){ display.innerHTML="maximum number of characters is 12";
+                                   }
+            switch(strength){
+            case 0:
+                strengthbar.value=0;
+                break;
+
+            case 1:
+                strengthbar.value=25;
+                break;
+
+            case 2:
+                strengthbar.value=50;
+                break;
+
+            case 3:
+                strengthbar.value=75;
+                break;
+
+            case 4:
+                strengthbar.value=100;
+                break; }
+        }
+        function checkPasswordEqual(password,confirmPassword){
+            error = document.getElementById('passwordError');
+            if (password !== confirmPassword) {
+                event.preventDefault();
+                error.style.display = 'block';
+            }else error.style.display = 'none';
+        }
+    </script>
+{% endblock %}

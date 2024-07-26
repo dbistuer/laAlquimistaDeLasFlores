@@ -1,0 +1,27 @@
+{% extends 'navbar.html' %}
+{% load i18n %}
+{% block stylesheet %}
+    <style>
+        .logout-container {
+            margin-top: 100px;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+    <div class="container logout-container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>{% trans "Logged Out" %}</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>{% trans "You have been logged out successfully." %}</p>
+                        <a href="{% url 'login' %}" class="btn btn-primary">{% trans "Login Again" %}</a>
+                        <a href="{% url 'home' %}" class="btn btn-primary">{% trans "Go home" %}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

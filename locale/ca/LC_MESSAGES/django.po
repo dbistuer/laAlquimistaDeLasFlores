@@ -1,0 +1,218 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-04 13:46+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\laAlquimistaDeLasFlores\settings\base.py:133
+#: .\templates\site_administration\translation.html:26
+msgid "English"
+msgstr ""
+
+#: .\laAlquimistaDeLasFlores\settings\base.py:134
+#: .\templates\site_administration\translation.html:27
+msgid "Spanish"
+msgstr "Español"
+
+#: .\laAlquimistaDeLasFlores\settings\base.py:135
+#: .\templates\site_administration\translation.html:28
+msgid "Catalan"
+msgstr "Catalá"
+
+#: .\templates\site_administration\error.html:27
+msgid "Oops!"
+msgstr "Vaja!"
+
+#: .\templates\site_administration\error.html:28
+msgid "Something went wrong. The page you are looking for could not be found."
+msgstr "Alguna cosa ha anat malament. La pàgina que busques no s'ha trobat."
+
+#: .\templates\site_administration\error.html:29
+msgid "Go to Homepage"
+msgstr "Anar a la pàgina principal"
+
+#: .\templates\site_administration\error.html:30
+msgid "Go Back"
+msgstr "Tornar enrere"
+
+#: .\templates\site_administration\translation.html:23
+msgid "Language"
+msgstr "Llengua"
+
+#: .\templates\site_administration\translation.html:33
+msgid "Welcome"
+msgstr "Benvingut"
+
+#: .\templates\site_administration\translation.html:34
+msgid "This is a sample paragraph to demonstrate language swapping."
+msgstr "Aquest és un paràgraf de mostra per demostrar el canvi d'idioma."
+
+#: .\templates\user_administration\address.html:6
+#: .\templates\user_administration\address.html:16
+#: .\templates\user_administration\signup.html:6
+#: .\templates\user_administration\signup.html:16
+msgid "User Registration"
+msgstr "Registre d'usuari"
+
+#: .\templates\user_administration\address.html:22
+msgid "Address"
+msgstr "Adreça"
+
+#: .\templates\user_administration\address.html:23
+msgid "Enter address"
+msgstr "Introdueix adreça"
+
+#: .\templates\user_administration\address.html:26
+msgid "City"
+msgstr "Ciutat"
+
+#: .\templates\user_administration\address.html:27
+msgid "Enter city"
+msgstr "Introdueix ciutat"
+
+#: .\templates\user_administration\address.html:30
+msgid "Province"
+msgstr "Província"
+
+#: .\templates\user_administration\address.html:31
+msgid "Enter province"
+msgstr "Introdueix província"
+
+#: .\templates\user_administration\address.html:34
+msgid "Country"
+msgstr "País"
+
+#: .\templates\user_administration\address.html:35
+msgid "Enter country"
+msgstr "Introdueix país"
+
+#: .\templates\user_administration\address.html:38
+msgid "Postal Code"
+msgstr "Codi postal"
+
+#: .\templates\user_administration\address.html:39
+msgid "Enter postal code"
+msgstr "Introdueix codi postal"
+
+#: .\templates\user_administration\address.html:41
+#: .\templates\user_administration\signup.html:63
+msgid "Register"
+msgstr "Registra't"
+
+#: .\templates\user_administration\login.html:6
+#: .\templates\user_administration\login.html:16
+#: .\templates\user_administration\login.html:32
+msgid "Login"
+msgstr "Connectar"
+
+#: .\templates\user_administration\login.html:21
+msgid "User name"
+msgstr "Nom d'usuari"
+
+#: .\templates\user_administration\login.html:22
+msgid "Enter user name"
+msgstr "Introdueix nom d'usuari"
+
+#: .\templates\user_administration\login.html:25
+#: .\templates\user_administration\login.html:26
+#: .\templates\user_administration\signup.html:54
+msgid "Password"
+msgstr "Contrasenya"
+
+#: .\templates\user_administration\login.html:30
+msgid "Remember me"
+msgstr "Recorda'm"
+
+#: .\templates\user_administration\logout.html:6
+msgid "Logout"
+msgstr "Desconnectar"
+
+#: .\templates\user_administration\logout.html:21
+msgid "Logged Out"
+msgstr "Desconnectat"
+
+#: .\templates\user_administration\logout.html:24
+msgid "You have been logged out successfully."
+msgstr "T'has desconnectat correctament."
+
+#: .\templates\user_administration\logout.html:25
+msgid "Login Again"
+msgstr "Torna a connectar-te"
+
+#: .\templates\user_administration\signup.html:22
+msgid "Username"
+msgstr "Nom d'usuari"
+
+#: .\templates\user_administration\signup.html:23
+msgid "Enter username"
+msgstr "Introdueix nom d'usuari"
+
+#: .\templates\user_administration\signup.html:26
+msgid "First name"
+msgstr "Nom"
+
+#: .\templates\user_administration\signup.html:27
+msgid "Enter first name"
+msgstr "Introdueix nom"
+
+#: .\templates\user_administration\signup.html:30
+msgid "Last name"
+msgstr "Cognom"
+
+#: .\templates\user_administration\signup.html:31
+msgid "Enter last name"
+msgstr "Introdueix cognom"
+
+#: .\templates\user_administration\signup.html:42
+msgid "Identification"
+msgstr "Identificació"
+
+#: .\templates\user_administration\signup.html:43
+msgid "Enter identification"
+msgstr "Introdueix identificació"
+
+#: .\templates\user_administration\signup.html:46
+msgid "Phone"
+msgstr "Telèfon"
+
+#: .\templates\user_administration\signup.html:47
+msgid "Enter phone number"
+msgstr "Introdueix número de telèfon"
+
+#: .\templates\user_administration\signup.html:50
+msgid "Email address"
+msgstr "Correu electrònic"
+
+#: .\templates\user_administration\signup.html:51
+msgid "Enter email"
+msgstr "Introdueix correu electrònic"
+
+#: .\templates\user_administration\signup.html:55
+msgid "Enter password"
+msgstr "Introdueix contrasenya"
+
+#: .\templates\user_administration\signup.html:59
+msgid "Confirm Password"
+msgstr "Confirma contrasenya"
+
+#: .\templates\user_administration\signup.html:60
+msgid "Repeat password"
+msgstr "Repeteix contrasenya"
+
+#: .\templates\user_administration\signup.html:62
+msgid "Passwords do not match"
+msgstr "Les contrasenyes no coincideixen"
