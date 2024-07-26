@@ -56,13 +56,13 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        var strengthbar= document.getElementById("meter");
+        var progressbar = document.getElementById("meter");
         var password = document.getElementById('password');
         var confirmPassword = document.getElementById('confirmPassword');
-        password.addEventListener("keyup", function(){checkpassword(password.value);});
+        password.addEventListener("keyup", function(){checkPassword(password.value);});
         confirmPassword.addEventListener("keyup", function(){checkPasswordEqual(password.value,confirmPassword.value);});
 
-        function checkpassword(password)
+        function checkPassword(password)
         {
             var strength=0;
             if (password.match(/[a-z]+/)){      strength+=1; }
@@ -76,23 +76,23 @@
                                    }
             switch(strength){
             case 0:
-                strengthbar.value=0;
+                progressbar.value=0;
                 break;
 
             case 1:
-                strengthbar.value=25;
+                progressbar.value=25;
                 break;
 
             case 2:
-                strengthbar.value=50;
+                progressbar.value=50;
                 break;
 
             case 3:
-                strengthbar.value=75;
+                progressbar.value=75;
                 break;
 
             case 4:
-                strengthbar.value=100;
+                progressbar.value=100;
                 break; }
         }
         function checkPasswordEqual(password,confirmPassword){
