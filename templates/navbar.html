@@ -17,7 +17,7 @@
                     <ul class="navbar-nav ms-auto">
                     <!-- user settings -->
                         <li class="nav-item dropdown dropleft">
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" name="dropUser" href="#" role="button" aria-expanded="false">
                                 {% if user.is_authenticated %}
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="green" class="bi bi-person-circle" viewBox="0 0 16 16">
                                 {% else %}
@@ -40,7 +40,7 @@
                         </li>
                         <!-- language settings -->
                         <li class="nav-item dropdown ">
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" name="dropLanguage" href="#" role="button" aria-expanded="false">
                                 {% with request.LANGUAGE_CODE as language %}
                                     {% if language == 'ca' %}
                                         <i class="flag flag-ca"></i>
