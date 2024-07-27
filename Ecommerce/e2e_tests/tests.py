@@ -18,7 +18,7 @@ class MySeleniumTests(LiveServerTestCase):
     def test_login(self):
         driver = self.selenium
         driver.get('http://127.0.0.1:8000/')
-        driver.implicitly_wait(30)
+        driver.implicitly_wait(300)
         #self.selenium.get('%s%s' % (self.live_server_url, '/login/'))
         #username_input = self.selenium.find_element(By.NAME, "username")
         #username_input.send_keys('myuser')

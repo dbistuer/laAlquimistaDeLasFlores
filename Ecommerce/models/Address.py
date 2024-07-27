@@ -3,7 +3,9 @@ from django.db.models import Model
 
 
 class Address(Model):
-    address = models.CharField(max_length=200)
+    street = models.CharField(max_length=200)
+    floor = models.IntegerField()
+    door = models.IntegerField()
     city = models.CharField(max_length=50)
     province = models.CharField(max_length=50)
     country = models.CharField(max_length=50)
