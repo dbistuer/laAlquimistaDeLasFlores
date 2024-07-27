@@ -48,29 +48,6 @@ def user_logout(request):
 
 
 #getter from POST
-def get_user_form(request,is_client=True):
-    user = User()
-    user.is_client = is_client
-    user.username = get_value_POST(request,'username')
-    user.password = get_value_POST(request, 'password')
-    user.email = get_value_POST(request,'email')
-    user.first_name = get_value_POST(request,'first_name')
-    user.last_name = get_value_POST(request,'last_name')
-    user.phone = get_value_POST(request,'phone')
-    user.address = get_value_POST(request,'address')
-    user.city = get_value_POST(request,'city')
-    user.province = get_value_POST(request,'province')
-    user.postal_code = get_value_POST(request,'postal_code')
-    user.country = get_value_POST(request,'country')
-    identification = Identification()
-    isNational = True
-    if isNational:
-        identification.NIF = get_value_POST('NIF')
-        identification.is_National = True
-    else:
-        identification.NIE = get_value_POST('NIE')
-        identification.is_National = False
-
 def get_value_POST(request, key):
     return request.POST[key]
 
@@ -90,7 +67,7 @@ def get_user_POST(request,keys,get_identification=True):
 def get_identification_POST(request):
     identification = Identification()
     doc_type = ''
-    if request.POST.get('NIE',False) == False:
+    if request.POST.get('NIF',False) == True:
         identification.is_National = True
     else:
         identification.is_National = False
