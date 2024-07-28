@@ -1,7 +1,7 @@
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.webdriver import WebDriver
-from ..models import User,Identification
+from ...models import User,Identification
 
 
 class MySeleniumTests(StaticLiveServerTestCase):
